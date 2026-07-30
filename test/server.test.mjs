@@ -20,6 +20,9 @@ test("server registers its core tools and resources", async () => {
     assert.ok(toolNames.has("list_vms"));
     assert.ok(toolNames.has("create_vm"));
     assert.ok(toolNames.has("list_services"));
+    assert.ok(toolNames.has("get_checkmk_summary"));
+    assert.ok(toolNames.has("create_checkmk_monitor"));
+    assert.ok(toolNames.has("refresh_checkmk_monitor"));
 
     const listVms = tools.find((tool) => tool.name === "list_vms");
     assert.ok(listVms.inputSchema.properties.all_pages);

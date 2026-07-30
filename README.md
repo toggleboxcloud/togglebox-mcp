@@ -13,6 +13,7 @@ This MCP server lets AI agents manage your Togglebox account and cloud infrastru
 - Power on, power off, reboot, shut down gracefully, or force power off.
 - Manage disks, backups, volumes, and ISOs.
 - Manage RGW/S3-compatible object storage buckets, objects, CORS, lifecycle, and usage.
+- Create and manage Checkmk HTTP, Ping, and TCP monitors, incidents, notifications, and live status.
 - Manage interfaces, IP aliases, reverse DNS, private networks, and security groups.
 - Register, list, delete, and install SSH keys.
 - Browse, create, rename, and manage OS templates.
@@ -228,6 +229,16 @@ Add this entry to `~/.gemini/settings.json` for global use or `.gemini/settings.
 - `set_rgw_bucket_public` / `set_rgw_bucket_encryption` / `set_rgw_bucket_lifecycle`
 - `list_rgw_objects` / `delete_rgw_objects` / `create_rgw_folder` / `presign_rgw_object`
 - `get_rgw_usage` / `get_rgw_usage_history`
+
+### Checkmk monitoring
+- `get_checkmk_summary` / `list_checkmk_monitors` / `get_checkmk_monitor`
+- `create_checkmk_monitor` / `update_checkmk_monitor` / `delete_checkmk_monitor`
+- `pause_checkmk_monitor` / `resume_checkmk_monitor`
+- `refresh_checkmk_monitor` / `refresh_checkmk_monitors`
+- `list_checkmk_incidents` / `create_checkmk_monitor_ticket`
+- `list_checkmk_monitorable_vms` / `bulk_create_checkmk_vm_monitors`
+- `bulk_manage_checkmk_monitors`
+- `list_checkmk_notification_contacts` / `set_checkmk_notification_contacts`
 
 ### Networking
 - `list_interfaces` / `attach_interface` / `detach_interface` / `swap_interfaces`

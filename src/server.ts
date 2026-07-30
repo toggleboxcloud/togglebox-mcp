@@ -24,6 +24,7 @@ import { register as registerAuthManagement } from "./tools/auth-management.js";
 import { register as registerContacts } from "./tools/contacts.js";
 import { register as registerServiceLifecycle } from "./tools/service-lifecycle.js";
 import { register as registerContent } from "./tools/content.js";
+import { register as registerCheckmk } from "./tools/checkmk.js";
 import { register as registerAccountResources } from "./resources/account.js";
 import { register as registerVmResources } from "./resources/vms.js";
 
@@ -56,6 +57,7 @@ export function createServer(client: ToggleboxClient): McpServer {
   registerContacts(server, client);
   registerServiceLifecycle(server, client);
   registerContent(server, client);
+  registerCheckmk(server, client);
 
   registerAccountResources(server, client);
   registerVmResources(server, client);
