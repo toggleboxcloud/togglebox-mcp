@@ -1,0 +1,20 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Secrets and local config
+.env
+.env.*
+.npmrc
+
+# MCP client config (may contain tokens)
+.mcp.json
+.cursor/
+.codex/
+.gemini/
+
+# Logs, editor, and OS noise
+*.log
+.DS_Store
+.vscode/
+.idea/
